@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Web APP</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h4>
+    <span id="display-name"></span>님 반갑습니다!
+</h4>
+<div class="contents">
+    <label for="userName">사용자 이름 : </label>
+    <input type="text" id="userName" name="userName">
+    <button id="button">입력하기</button>
+</div>
+<script src="test_web_app/node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#button").on('click', function () {
+            var userName = $("#userName").val();
+            $("#display-name").text(userName);
+        });
+
+    });
+</script>
+</body>
+</html>
